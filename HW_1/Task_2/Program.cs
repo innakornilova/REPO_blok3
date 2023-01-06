@@ -1,17 +1,17 @@
 ﻿//Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее
 
-intA = 15;
+int A = 15;
 
-intB = 145;
+int B = 145;
 
-if (intA > intB)
+if (A > B)
 {
-    Console.WriteLine("max = intA");
-    Concole.WriteLine(max);
+    Console.WriteLine("max = A");
+    Console.WriteLine(A);
 }
 else
 {
-    Console.WriteLine("max = intB");
-    Concole.WriteLine(max);
+    Console.WriteLine("max = B");
+    Console.WriteLine(B);
 }
 
