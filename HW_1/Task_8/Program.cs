@@ -1,17 +1,20 @@
 ﻿// Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
 
+//Достаточно было index присвоить значение 1б в условии цикла прописать index <= N, 
+// а в консоль, соответственно, выводить значение index, если он имеет четное значение
+
 Console.WriteLine("Введите значение числа N");
 int N = Convert.ToInt32(Console.ReadLine());
 
-int [] array = {1, 2, 3, 4, 5};
+int[] arr = Enumerable.Range(1, N).ToArray();
 int index;
-index = 0;
+index = 1;
 
 while (index < N)
 {
-    if (array[index] % 2 == 0) 
+    if (arr[index] % 2 == 0) 
     {
-        Console.WriteLine (array[index]);
+        Console.WriteLine (arr[index]);
     }
 
     index ++;   
