@@ -8,11 +8,9 @@ if (A < 8)
 {
 
     if (A < 6)
-    {
         Console.WriteLine("Рабочий день"); 
-    }
+    
     else
-    {
         Console.WriteLine("Выходной день"); 
-    }
+    
 }
