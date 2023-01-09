@@ -14,6 +14,6 @@ else
        int B = A % 100;    
     }
    
-Console.Write ("Третья цифра чила: ");
+Console.Write ("Третья цифра числа: ");
 Console.WriteLine (B);
 }       
