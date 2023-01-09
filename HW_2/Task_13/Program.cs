@@ -4,16 +4,15 @@ Console.WriteLine("Введите значение числа А ");
 int A = Convert.ToInt32(Console.ReadLine());
 
 if (A < 100)
-{
     Console.WriteLine ("Третьей цифры нет");
-}
+
 else 
 {
-    if (A < 1000) 
+    while (A >= 100) 
     {
-       int B = A % 100;    
-    }
-   
-Console.Write ("Третья цифра числа: ");
-Console.WriteLine (B);
-}       
+       A = A / 10;    
+    }    
+    Console.Write ("Третья цифра числа: ");
+    Console.WriteLine (A % 10);
+}
+ 
