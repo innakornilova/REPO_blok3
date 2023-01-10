@@ -2,12 +2,12 @@
 // и проверяет, является ли этот день выходным.
 
 Console.WriteLine("Введите цифру, обозначающую день недели: ");
-int A = Convert.ToInt32(Console.ReadLine());
+int day = Convert.ToInt32(Console.ReadLine());
 
-if (A < 8)
+if (day < 8)
 {
 
-    if (A < 6)
+    if (day < 6)
         Console.WriteLine("Рабочий день"); 
     
     else
