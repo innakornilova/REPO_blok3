@@ -4,12 +4,14 @@
 Console.WriteLine("Введите цифру, обозначающую день недели: ");
 int day = Convert.ToInt32(Console.ReadLine());
 
-if (day < 8)
+string GetInfoByDayOfWeek (int day)
 {
     if (day < 6)
-        Console.WriteLine("Рабочий день"); 
-    else
-        Console.WriteLine("Выходной день");     
+        return ("Рабочий день"); 
+    else if (day > 5 && day < 8)
+        return ("Выходной день");     
+    else 
+        return ("Введите другое число"); 
 }
-else 
-    Console.WriteLine("Введите другое число"); 
+
+Console.WriteLine(GetInfoByDayOfWeek(day));
