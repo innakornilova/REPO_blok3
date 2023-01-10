@@ -6,11 +6,10 @@ int day = Convert.ToInt32(Console.ReadLine());
 
 if (day < 8)
 {
-
     if (day < 6)
         Console.WriteLine("Рабочий день"); 
-    
     else
-        Console.WriteLine("Выходной день"); 
-    
+        Console.WriteLine("Выходной день");     
 }
+else 
+    Console.WriteLine("Введите другое число"); 
