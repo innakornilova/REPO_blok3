@@ -24,6 +24,3 @@ int index;
 index = 0;
 
 index = cubing(number, arr, index);
-
-
-
