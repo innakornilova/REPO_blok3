@@ -11,7 +11,6 @@ double yb = 1;
 double za = 8;
 double zb = 3; 
 
-
 // int х1 = ReadInt("Введите координату X первой точки: ");
 // int y1 = ReadInt("Введите координату Y первой точки: ");
 
