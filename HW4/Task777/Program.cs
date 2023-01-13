@@ -25,18 +25,16 @@
 // 10110100 = 1*2^7 + 0*2^6 + 1*2^5 + 1*2^4 + 0*2^3 + 1*2^2 + 0*2^1 + 0*2^0
 
 
-void Task777()
+async void Task777()
 {
     int countByUser = GetNumberByUser("Введите число N: ");
-    int[] list = CreateArray(countByUser);
-    GetBinArray(list);
-    string result = PrintArray(list);
-    Console.WriteLine(result);
+    int[] arr = CreateArray(countByUser);
+    GetBinArray(arr);
+    int result = GetDecArray(arr);
+    string binPrint = PrintArray(arr);
+    Console.WriteLine(binPrint);
+    Console.WriteLine(GoodPrint(arr, result));
 }
 
 Task777();
 
-// {
-//     return $"{String.Join("", numbers[i])}>>{decNumber}";
-// }
-// Console.WriteLine(GoodPrint(new int[]{1011110},56));

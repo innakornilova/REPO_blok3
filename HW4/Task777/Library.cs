@@ -9,7 +9,7 @@ public static class Library
 // 2. Метод создания массива
     public static int [] CreateArray(int size)
     {
-        return new int[size + 1];
+        return new int[size];
     }
 // 3. Метод заполнения массива 0 и 1
     public static void GetBinArray(int[] colNumber)
@@ -19,7 +19,7 @@ public static class Library
 
         for (int i = 1; i < count; i++)   
         {
-            colNumber[i] = Random.Shared.Next(1); 
+            colNumber[i] = Random.Shared.Next(2); 
         }
     }
 
@@ -29,30 +29,36 @@ public static class Library
         string output = String.Empty;
         int size = numbers.Length;
 
-        for (int i = 0; i < size; i++)
+        for (int j = 0; j < size; j++)
         {
-            output = output + $"{("", numbers[i])}\n";
+            output = output + $"{numbers[j]} ";
         }
-
         return output;
     }
 
 // 5. Конвертация из 2го в 10е
-    public static void GetDecArray(int[] decNumber)
+    public static int GetDecArray(int[] binNumber)
     { 
-        int degree = 0;
-        int finalNumber = 0;
-        int val1 = 0;
+        int count = binNumber.Length;
+        int exponent = binNumber.Length-1;
+        int result = 0;
         
-        while (output > 0)   
+        for (int m = 0; m < binNumber.Length; m++)   
         {
-            val1 = output % 10 * 2 ^ degree; 
-            finalNumber = finalNumber + val1;
-            output = output / 10;
-            degree++;
+            if (binNumber[m] == 1)
+            {
+                result += Convert.ToInt32(Math.Pow(2, exponent)); // result = result +
+            } 
+            exponent --;
         }
+    return result;
     }
 
 // 6. Красиво распечатать: 10110100 >> 180
-
+// string <- (int[], int])
+    public static string GoodPrint(int[] bin, int dec)
+    {
+        return $"{String.Join("", bin)} >> {dec}";
+    }
 }
+
