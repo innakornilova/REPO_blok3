@@ -1,4 +1,4 @@
-﻿using static library;
+﻿using static Library;
 
 // Напишите программу, которая принимает на вход число (N) и 
 // выдаёт таблицу кубов чисел от 1 до N.
@@ -12,7 +12,7 @@
 
 void Task23()
 {
-    int countByUser = GetNumberByUser("Введите число N: ");
+    int countByUser = GetNumberByUser("Введите число N ");
     int[] list = CreateArray(countByUser);
     GetCubing(list);
     string result = Print(list);
