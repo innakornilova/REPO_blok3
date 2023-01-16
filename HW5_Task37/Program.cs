@@ -75,7 +75,7 @@
         return output;
     }
 
-    int[] Mult(int[] array)
+    int[] newArray(int[] array)
     {   
         int[] result = new int [array.Length/2]; 
         int count = array.Length;
@@ -100,16 +100,17 @@
     //     return output;
     // }
 
-    string GoodPrint(int[] arr, int[] result)
+    string GoodPrint(int[] arr, int[] colMult)
     {
-        return $"{String.Join(" ", arr)} >> произведение пар чисел >> {result}";
+        return $"{String.Join(" ", arr)} >> произведение пар чисел >> {colMult}";
     }
 
     int countByUser = GetNumberByUser("Введите число N: ");
     int[] arr = CreateArray(countByUser);
     FillArray(arr);
     string Print = PrintArray(arr);
-    int[] result = Mult(arr);
+    int[] colMult = newArray(arr);
     Console.WriteLine(Print);
+    // Console.WriteLine(colMult);
     // string Print2 = PrintMult(arr);
-    Console.WriteLine(GoodPrint(arr, result));
+    Console.WriteLine(GoodPrint(arr, colMult));

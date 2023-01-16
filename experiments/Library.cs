@@ -1,5 +1,16 @@
 // если используем Метод из библиотеки, то перед названием Метода пишем : public static (см. HW4\Task777)
 
+// Метод запроса координат начальных точек двух прямых
+// double GetValue(string text)
+// {
+//     System.Console.Write(text);
+//     return Convert.ToDouble(Console.ReadLine());
+// }
+// double k1 = GetValue("k1 = ");
+// double b1 = GetValue("b1 = ");
+// double k2 = GetValue("k2 = ");
+// double b2 = GetValue("b2 = ");
+
 
 // //Метод запроса числа у пользователя
 // int GetNumberByUser(string text)
@@ -216,4 +227,12 @@
 // for (int i = 1; i < 45; i++)
 // {
 //      Console.WriteLine($"f({i}) = {Fibonacci(i)}");
+// } 
+
+// Метод нахождения точки пересечения двух прямых
+// (double, double) GetCrossLine(double k1, double b1, double k2, double b2)
+// {
+//     double x = (b2-b1) / (k1 - k2);
+//     double y = k1* x + b1;
+//     return (x, y);
 // } 
