@@ -102,7 +102,8 @@
 
     string GoodPrint(int[] arr, int[] colMult)
     {
-        return $"{String.Join(" ", arr)} >> произведение пар чисел >> {colMult}";
+        return $"{String.Join(" ", arr)} >> произведение пар чисел >>  {String.Join(" ", colMult)}"; 
+        // {String.Join(" ", colMult)} потому что это не просто 1 число, а несколько чисел
     }
 
     int countByUser = GetNumberByUser("Введите число N: ");
