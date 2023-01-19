@@ -10,7 +10,7 @@ int result = 0;
  
 for (int i = 0; i < arr.Length; i++)
 {
-    if (arr[i] > 0)
+    if (arr[i] > 0) 
     {
         result++;
     }
