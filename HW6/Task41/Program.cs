@@ -4,33 +4,22 @@
 
 // 1, -7, 567, 89, 223-> 3
 
-string[] data = Console.ReadLine().Split(' ');
-for (int i = 0; i < data.Length; i++)
+Console.Write("Введите целые числа через пробел: ");
+int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+int result = 0;
+ 
+for (int i = 0; i < arr.Length; i++)
 {
-    Console.Write(" " + int.Parse(data[i]) + ",");
-}
-Console.WriteLine();
-
-
-int[] Result(int[] origArray)
-{
-    int count = 0;
-    
-    for (int i = 0; i < origArray.Length; i++)
+    if (arr[i] > 0)
     {
-        if (origArray[i] > 0) count++;
+        result++;
     }
 }
-
-string data;
-int[] count = Result(data);
-Console.WriteLine(count);
+ 
+Console.WriteLine($"Кол-во чисел больше 0: {result}");
 
 
-// Console.Write("Введите числа через запятую: ");
-// string words = Console.ReadLine();
-// origArray = words.Split(",");
-// int[] arr = Count(origArray);
-// Console.WriteLine(arr);
+
+
 
 
