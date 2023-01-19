@@ -1,20 +1,24 @@
 ﻿//
-int[] array = {3, 5, 8, 9, 2};
-int[] result = {};
 
-int[] Mult(int[] array)
-{   
-    result = new int[array.Length/2]; 
-    int count = array.Length;
-                
-    for (int i = 0; i < count / 2; i++)   
+string[] data = Console.ReadLine().Split(' ');
+for (int i = 0; i < data.Length; i++)
+{
+    Console.Write(" " + int.Parse(data[i]) + ",");
+}
+Console.WriteLine();
+
+
+int Count(int[] origArray)
+{
+    int count;
+    count = 0;
+
+    for (int i = 0; i < origArray.Length; i++)
     {
-        Console.WriteLine(result[i] = array[i] * array[count - 1 - i]);
-    } 
-                
-// return result;
+        if (origArray[i] > 0) count++;
+    }
+return count;
 }
 
-// Console.WriteLine(result);
 
- 
+Console.WriteLine(count);

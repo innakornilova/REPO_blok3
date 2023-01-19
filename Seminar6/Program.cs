@@ -5,13 +5,13 @@
 
 int GetNumberByUser(string text)
 {
-    Console.Write(text + ": ");
+    Console.Write(text + " ");
     return Convert.ToInt32(Console.ReadLine());
 }
 
 int [] CreateArray(int number)
 {
-    int[] arr = new int[number]     
+    int[] arr = new int[number];     
      return arr;
 }
 
@@ -42,8 +42,9 @@ int [] CreateArray2(int[] arr)
 
     int countByUser = GetNumberByUser("Введите число N: ");
     int[] arr = CreateArray(countByUser);
-    int[] arr2 = CreateArray2(array);
+    int[] arr2 = CreateArray2(arr);
     FillArray(arr);
     ClonArray(arr, arr2);
+    Console.WriteLine(arr, arr2);
 
     

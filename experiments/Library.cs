@@ -47,36 +47,56 @@
 // //     int [] <- (int [])
 // int [] CreateArr(int number)
 // {
-//      int[] arr = new int[number]     
+//      int[] arr = new int[number];     
 //      return arr;
 // }
 
 
 // //Метод заполнения массива рандомными числами (например, от 0 до 9)
-    // void FillArray(int[] colNumber)
-    // {
-    //     int count = colNumber.Length; 
+//     void FillArray(int[] colNumber)
+//     {
+//         int count = colNumber.Length; 
                 
-    //     for (int i = 0; i < count; i++)   
-    //     {
-    //         colNumber[i] = Random.Shared.Next(1, 10); 
-    //     } 
-    // }
+//         for (int i = 0; i < count; i++)   
+//         {
+//             colNumber[i] = Random.Shared.Next(1, 10); 
+//         } 
+//     }
 
 
 // //Метод заполнения массива 0 и 1
 // //    void <- (int[])
-    // void FillBinArray(int[] colNumber)
-    // {
-    //     int count = colNumber.Length; 
-    // //   colNumber[0] = 1;        // if left number != 0              
+//     void FillBinArray(int[] colNumber)
+//     {
+//         int count = colNumber.Length; 
+//     //   colNumber[0] = 1;        // if left number != 0              
 
-    //     for (int i = 0; i < count; i++)   
-    //     {
-    //         colNumber[i] = Random.Shared.Next(2); // Random.Shared.Next(2) - т.е. берет числа <2
-    //// ex.int[] arr = Enumerable.Range(1, N).ToArray();
-    //     }
-    // }
+//         for (int i = 0; i < count; i++)   
+//         {
+//             colNumber[i] = Random.Shared.Next(2); // Random.Shared.Next(2) - т.е. берет числа <2
+//     // ex.int[] arr = Enumerable.Range(1, N).ToArray();
+//         }
+//     }
+
+// //Метод заполнения двумерного массива 
+// int[,] CreateFillArray()
+// {
+//     Console.WriteLine("Введите количество строк и столбцов в таблице (ввод числа через enter)");
+//     int [,]arr = new int[Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine())];
+//     Console.WriteLine(); 
+             
+//     for (int i = 0; i < array.GetLength(0); i++)   
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($"|{arr[i,j], 2}|");
+//         }   
+//         Console.WriteLine();
+//     } 
+//     return arr;
+// }
+// int[,] arr = CreateFillArray();
+
 
 
 // Метод копирования массива
@@ -189,9 +209,9 @@
 // Console.WriteLine(); // переход на новую строку для цифр следующей строчки
 // }
 
-
-// Void FillImage(int row, inr col) //метод закрашивания картинки внутри плюсов
+// метод закрашивания картинки внутри плюсов
 // {
+// Void FillImage(int row, inr col) 
 //      if (pic[row, col] ==0)
 //      {
 //          pic[row, col] = 1;
@@ -200,7 +220,7 @@
 //          FillImage(row, col + 1);
 //      }
 // }
-//
+
 // PrintImage(pic);
 // FillImage (13, 13);  // указываем начальную точку внутри изображения
 // PrintImage(pic);
@@ -236,3 +256,47 @@
 //     double y = k1* x + b1;
 //     return (x, y);
 // } 
+
+// Метод нахождения произведения пар чисел в массиве (крайнее справа и слева и тд)
+// int[] multArray(int array)
+// {
+//      int[] mult = new int [array.Length/2];
+//      for (int = 0; int < array.Length/2; int++);
+//      {
+//          mult[i] = array[i] * array[array.Length-1-i];  
+//      }
+//      return mult; 
+// }
+//  inputNumbers(m);
+// int[] arr = CreateArr(Numbers);
+// int[] mult = multArray();
+
+
+// Метод сортировки двумерного массива
+//  void SortArray(int[,])
+//  {
+//     for (int k =0; k < array.GetLength(0); k++)
+//     {
+//         int size = array.GetLength(1);
+//         for (int i = 0; i < size - 1; i++)
+//         {
+//             int pos = i;
+//             for (int j = i + 1; j < size; j++)
+//             {
+//                 if (array[k, j] > array[k, pos]) pos = j;
+//             }
+//             int temp = array[k, i];
+//             array[k, i] = array[k, pos];
+//             array[k, pos] = temp;
+//         }
+//     }
+//  }
+
+
+// метод ввода массива??!!
+// int[] data = Console.ReadLine()
+//                     .Split(' ') // вместо ToInt32
+//                     .Select(int.Parse)
+//                     .ToArray();
+
+
