@@ -294,9 +294,19 @@
 
 
 // метод ввода массива??!!
+
 // int[] data = Console.ReadLine()
 //                     .Split(' ') // вместо ToInt32
 //                     .Select(int.Parse)
 //                     .ToArray();
+
+// метод ввода полученного от пользователя двумерного массива через запятую
+
+// string[] data = Console.ReadLine().Split(' ');
+// for (int i = 0; i < data.Length; i++)
+// {
+//     Console.Write(" " + int.Parse(data[i]) + ",");
+// }
+// Console.WriteLine();
 
 
