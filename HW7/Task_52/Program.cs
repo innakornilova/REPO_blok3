@@ -24,23 +24,19 @@ void Pprint(int[,] m)
     Console.WriteLine();
 }
 
-Split (matrix); 
-Select(e=> (x: int.Parse(e[0]), y: int.Parse(e[1]))); 
-
-void Average(int[,] matrix2D)
-{
-    for (int k = 0; k < matrix.GetLength(0); k++)
-    {  
-        int result = 0;
-        int size = matrix.GetLength(1);
-        for (int i = 0; i < size - 1; i++)   // почему размер -1?
-        {
-            result = result ;
-        }
-    }
-}
-
 Pprint(matrix);
-Average(matrix);
-int result = ;
-Pprint(result);
+
+double average = 0;
+int count = 0;
+for (int j = 0; j < matrix.GetLength(1); j++)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        average += matrix[i, j];
+        count++;
+    }
+    average /= count;
+    Console.WriteLine($"Среднее арифметическое столбца {j + 1}: {average}");
+    average = 0;
+    count = 0;
+}
