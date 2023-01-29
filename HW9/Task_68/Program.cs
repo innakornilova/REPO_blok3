@@ -1,9 +1,11 @@
 ﻿// Task 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. 
 // Даны два неотрицательных числа m и n.
 
+Console.Write("Введите первое натуральное число m: ");
+double m = Convert.ToInt32(Console.ReadLine());
 
-double m = 2;
-double n = 4;
+Console.Write("Введите второе натуральное число n: ");
+double n = Convert.ToInt32(Console.ReadLine());
 
 double A (double m, double n)
 {
