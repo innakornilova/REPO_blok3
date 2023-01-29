@@ -78,7 +78,7 @@
 //         }
 //     }
 
-// //Метод заполнения двумерного массива 
+// //Метод создания двумерного массива 
 // int[,] CreateFillArray()
 // {
 //     Console.WriteLine("Введите количество строк и столбцов в таблице (ввод числа через enter)");
@@ -98,6 +98,36 @@
 // int[,] arr = CreateFillArray();
 
 
+//  метод заполнения заданного по размеру двумерного массива вещественными рандомными числами
+
+// void PrintArray(double[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++) // matrix.Get.Length(0) - это отсылка к количеству строк в матрице 
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++) //matrix.Get.Length(1) - это отсылка к количеству столбцов в матрице
+//         {
+//             Console.Write($" {matr[i, j]} "); // пробегаем по всем элементам столбика
+//         }
+//     Console.WriteLine(); // переход на новую строку для цифр следующей строчки
+//     }
+// }
+
+// void FillArray(double[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++) // matrix.Get.Length(0) - это отсылка к количеству строк в матрице 
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++) //matrix.Get.Length(1) - это отсылка к количеству столбцов в матрице
+//         {
+//             matr[i, j] = new Random().Next(-30, 30); // случайное заполнение вещественными числами
+//         }
+//     }
+// }
+
+// double[,] matrix = new double [3, 4]; //размер двумерного массива задается сразу
+// PrintArray(matrix);
+// FillArray(matrix);
+// Console.WriteLine(); // пропускаем строку для красоты печати
+// PrintArray(matrix);
 
 // Метод копирования массива
 // void ClonArray(int[] filledArray, int[] x)
@@ -300,6 +330,8 @@
 //                     .Select(int.Parse)
 //                     .ToArray();
 
+
+
 // метод ввода полученного от пользователя двумерного массива через запятую
 
 // string[] data = Console.ReadLine().Split(' ');
@@ -308,5 +340,35 @@
 //     Console.Write(" " + int.Parse(data[i]) + ",");
 // }
 // Console.WriteLine();
+
+// метод вычисления функции Аккермана с помощью рекурсии. (например, даны два неотрицательных числа m и n)
+
+// int m = 2;
+// int n = 3;
+// int AkkermanFunction(int m, int n)
+// {
+//     if(m == 0)
+//     return n + 1;
+//     if(n == 0)
+//     return AkkermanFunction(m - 1, 1);
+//     if(m > 0 && n > 0)
+//     return AkkermanFunction(m - 1, AkkermanFunction(m, n - 1));
+//     return AkkermanFunction(m, n);
+// }
+// Console.WriteLine($" A({m},{n}) = {AkkermanFunction(m, n)}");
+
+
+// метод вычисления функции Аккермана с помощью рекурсии. (например, даны два вещественных неотрицательных числа m и n)
+// double m = 2;
+// double n = 3;
+// double A (double m, double n)
+// {
+//     if (m == 0)
+//         return n + 1;
+//     else if (m > 0 && n == 0)
+//         return A (m - 1, 1);
+//     else return A (m - 1, A (m, n - 1));
+// }
+// Console.WriteLine($" A({m},{n}) = {A(m, n)}");
 
 
